@@ -65,6 +65,10 @@ def main():
 
     args = parser.parse_args()
 
+    # check if a password was provided for encryption
+    if args.operation == 'encrypt' and not args.password:
+        raise ValueError('Password is required for encryption')
+
     # iterate over all files in the folder
     for filename in os.listdir(args.folder_path):
         # check if the file is a PNG image

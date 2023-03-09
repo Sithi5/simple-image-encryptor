@@ -46,21 +46,25 @@ This will activate the virtual environment and change your command prompt to ind
 
 ## Usage
 
-- Clone or download the repository to your local machine.
+- Clone this repository or download the source code.
 
-- Open a command prompt or terminal and navigate to the directory containing the Python file.
+- Open a terminal or command prompt and navigate to the directory containing the program files.
 
-- Run the following command to start the program:
+- Create a virtual environment by running `python -m venv venv`.
 
-```bash
-python filename.py
-```
+- Activate the virtual environment by running `venv\Scripts\activate` on Windows or `source venv/bin/activate` on Linux/Mac.
 
-- Replace filename.py with the name of your Python file.
+- Install the required cryptography module by running pip install -r requirements.txt.
 
-- The program will prompt you to enter the path of the folder containing the files you want to encrypt or decrypt, whether you want to encrypt or decrypt the files, and for encryption, the password to use for encryption.
+- Run the program by running `python image_encrypt.py folder_path operation [-p password]` in the terminal or command prompt, where:
 
-- The program will then perform the encryption or decryption on all PNG image files in the specified folder.
+- `folder_path` is the path to the folder containing the image files.
+
+- `operation` is the operation to perform, either encrypt or decrypt.
+
+- `-p password` is a mandatory argument for the password to use for encryption.
+
+- The program will process all `PNG` and `JPEG` image files in the specified folder, encrypting or decrypting them based on the operation specified.
 
 ## Acknowledgments
 
