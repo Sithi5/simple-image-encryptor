@@ -1,6 +1,6 @@
 # File Encryption Program
 
-This is a Python program that can encrypt and decrypt files using the cryptography package. It supports encryption and decryption of PNG image files, but can be easily modified to support other file types.
+This is a simple Python script that can encrypt and decrypt files in a given folder using the AES encryption algorithm. The script prompts the user for a password to use for encryption or decryption.
 
 ## Requirements
 
@@ -58,13 +58,28 @@ This will activate the virtual environment and change your command prompt to ind
 
 - Run the program by running `python image_encrypt.py folder_path operation [-p password]` in the terminal or command prompt, where:
 
-- `folder_path` is the path to the folder containing the image files.
+- `folder_path`: Path to the folder containing the files to encrypt or decrypt.
 
-- `operation` is the operation to perform, either encrypt or decrypt.
+- `operation`: The operation to perform. Must be either "encrypt" or "decrypt".
 
-- `-p password` is a mandatory argument for the password to use for encryption.
+- `-v, --verbose`: (Optional) Enable verbose output.
 
 - The program will process all `PNG` and `JPEG` image files in the specified folder, encrypting or decrypting them based on the operation specified.
+
+- When the script is run, it will prompt the user to enter a password for encryption or decryption. The password cannot be empty.
+
+## Examples
+
+To encrypt all the PNG and JPG images in the images folder and enable verbose output:
+
+```
+python simple-file-encryptor.py images encrypt -v
+To decrypt all the PNG and JPG images in the images folder:
+```
+
+```
+python simple-file-encryptor.py images decrypt
+```
 
 ## Acknowledgments
 
