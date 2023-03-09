@@ -1,6 +1,6 @@
 # File Encryption Program
 
-This is a Python program that can encrypt and decrypt files using the cryptography package. It supports encryption and decryption of PNG image files, but can be easily modified to support other file types.
+This is a Python program that can encrypt and decrypt files using the cryptography package. It supports encryption and decryption of PNG and JPG image files, but can be easily modified to support other file types.
 
 ## Requirements
 
