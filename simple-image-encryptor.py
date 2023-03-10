@@ -4,7 +4,9 @@ from Crypto.Protocol.KDF import PBKDF2
 import os
 import argparse
 import getpass
+from logger.Logger import Logger
 
+logger = Logger(level="INFO", display_date=False, colors=True, display_levels=True)
 
 def encrypt_file(file_path: str, password: str, verbose: bool = False) -> None:
     """
@@ -18,7 +20,7 @@ def encrypt_file(file_path: str, password: str, verbose: bool = False) -> None:
         None
     """
     if verbose:
-        print(f"Encrypting file: {file_path}")
+        logger.info(f"Encrypting file: {file_path}")
 
     # generate a salt for PBKDF2 key derivation
     salt = get_random_bytes(16)
@@ -74,7 +76,7 @@ def decrypt_file(file_path: str, password: str, verbose: bool = False) -> None:
         None
     """
     if verbose:
-        print(f"Decrypting file: {file_path}")
+        logger.info(f"Decrypting file: {file_path}")
 
     # read the salt, initialization vector, and encrypted bytes from the file
     with open(file_path, "rb") as f:
